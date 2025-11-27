@@ -53,6 +53,8 @@
 
 .post {
   block-size: 760px;
+  display: grid;
+  grid-template-rows: min-content fit-content max-content;
 }
 
 .post__title {
@@ -62,7 +64,32 @@
   padding:  4px 10px 6px;
 }
 
+.post__image {
+  position: relative;
+  border: 2px solid #000;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.watermark {
+  position: absolute;
+}
+
 .post__content {
+  border: 2px solid #000;
   display: grid;
-  align-content: space-evenly;
+  grid-template-rows: max-content max-content min-content;
+  gap: 25px;
+  padding: 25px;
+}
+
+.post__content-description {
+  line-height: 21px;
+}
+
+.post__content-like-button {
+  justify-self: end;
+  inline-size: 130px;
+  block-size: 38px;
 }
