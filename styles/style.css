@@ -16,10 +16,11 @@
   font-family: var(--main-font-family, sans-serif);
   font-size: var(--main-font-size);
   font-variation-settings: 'wght' var(--main-font-weight);
-  background-image: url('../images/BackgroundImage.png');
+  background-image: url('../images/background.svg');
 }
 
 .header {
+  inline-size: 100vw;
   background-color: #fff;
   align-content: center;
   display: flex;
@@ -41,7 +42,7 @@
 }
 
 .header__description {
-  font-family: var(--accent-font-family);
+  font-family: var(--accent-font-family), sans-serif;
   font-weight: 400;
   font-size: 14px;  /* Заменить на clamp */
   text-transform: uppercase;
@@ -51,32 +52,45 @@
   background-color: #fff;
 }
 
-.post {
+.card {
+  inline-size: 100vw;
   block-size: 760px;
   display: grid;
-  grid-template-rows: min-content fit-content max-content;
+  grid-template-rows: 62px 100vw max-content;
 }
 
-.post__title {
+.card__title {
   font-variation-settings: 'wght' var(--title-font-weight);
   border: 2px solid #000;
 
-  padding:  4px 10px 6px;
+  padding: 4px 10px 6px;
 }
 
-.post__image {
+.card__image-container {
   position: relative;
   border: 2px solid #000;
+  
+}
+
+.card__image {
   height: 100%;
   object-fit: cover;
-  object-position: center;
+  object-position: right;
 }
 
 .watermark {
+  font-family: var(--accent-font-family), sans-serif;
+  font-size: 14px;
   position: absolute;
+  top: 25px;
+  right: 13px;
 }
 
-.post__content {
+.watermark:nth-child(1), .watermark:nth-child(2) {
+  text-transform: uppercase;
+}
+
+.card__content {
   border: 2px solid #000;
   display: grid;
   grid-template-rows: max-content max-content min-content;
@@ -84,12 +98,16 @@
   padding: 25px;
 }
 
-.post__content-description {
+.card__content-description {
   line-height: 21px;
 }
 
-.post__content-like-button {
+.card__content-like-button {
   justify-self: end;
   inline-size: 130px;
   block-size: 38px;
+  background-color: transparent;
+  font-family: var(--accent-font-family), sans-serif;
+  font-size: 14px;
+  line-height: 90%;
 }
