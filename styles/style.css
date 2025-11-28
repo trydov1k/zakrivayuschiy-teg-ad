@@ -106,19 +106,6 @@
   padding: 25px;
 }
 
-.card__like-button {
-  justify-self: end;
-  inline-size: 130px;
-  block-size: 38px;
-  background-color: transparent;
-  font-family: var(--accent-font-family), sans-serif;
-  font-size: 14px;
-  line-height: 90%;
-}
-
-
-
-
 .card__buttons {
   display: flex;
   align-items: center;
@@ -147,4 +134,74 @@
 
 .button__text {
   color: #000;
+}
+
+.dialog {
+  inline-size: 357px;
+  font-family: var(--main-font-family);
+  padding: 0;
+  background-color: #fff;
+  color: #000;
+  border: 2px solid #000;
+}
+
+.dialog[open] {
+  display: flex;
+}
+
+.dialog::backdrop {
+  background-color: rgb(0 0 0 / 0.75);
+}
+
+.dialog__content {
+  padding: 30px;
+  display: flex;
+  gap: 20px;
+}
+
+.dialog__column {
+  display: flex;
+  flex-direction: column;
+}
+
+.dialog__column:first-child {
+  justify-content: center;
+  align-items: center;
+}
+
+.dialog__icon {
+  inline-size: 39px;
+  block-size: 39px;
+  color: #000;
+}
+
+.dialog__title {
+  text-transform: uppercase;
+  font-family: var(--accent-font-family);
+  font-size: 14px;
+  line-height: 150%;
+  margin-bottom: 20px;
+}
+
+.dialog__text {
+  font-size: 14px;
+  line-height: 150%;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+.dialog__form {
+  display: flex;
+  justify-content: center;
+}
+
+.dialog__button {
+  inline-size: 100%;
+  font-family: var(--accent-font-family);
+  font-size: 14px;
+  padding: 10px;
+  border: 2px solid #000;
+  text-transform: uppercase;
+  background-color: #fff;
+  position: relative;
 }
