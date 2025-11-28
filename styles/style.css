@@ -13,7 +13,7 @@
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
-  font-family: var(--main-font-family, sans-serif);
+  font-family: var(--main-font-family), sans-serif;
   font-size: var(--main-font-size);
   font-variation-settings: 'wght' var(--main-font-weight) 400;
   line-height: 21px;
@@ -25,20 +25,21 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  inline-size: 100vw;
-  background-color: #fff;
   gap: 20px;
+
+  inline-size: var(--page-width);
+  margin: 100px auto;
+
+  background-color: #fff;
   border: 2px solid #000;
 
-  height: 327px;
-  margin-block-start: 100px;  /* !!!!!!!!!!!!!!! */
-  margin-block-end: 100px;  /* !!!!!!!!!!!!!!! */
+  padding: clamp(7.5rem, 7.1479rem + 1.5023vw, 8rem) clamp(0.875rem, -5.0626rem + 25.333vw, 7.531rem);
 }
 
 .header__title {
-  font-size: 49px;  /* Заменить на clamp */
+  font-size: 65px;  /* Заменить на clamp */
   text-transform: uppercase;
-  font-family: var(--accent-font-family);
+  font-family: var(--accent-font-family), sans-serif;
   font-weight: 400;
   line-height: 100%;
 }
@@ -46,37 +47,41 @@
 .header__description {
   font-family: var(--accent-font-family), sans-serif;
   font-weight: 400;
-  font-size: 14px;  /* Заменить на clamp */
+  font-size: 23px;  /* Заменить на clamp */
   text-transform: uppercase;
+  line-height: 100%;
 }
 
 .main {
+  margin: 0 auto;
   background-color: #fff;
+  inline-size: var(--page-width);
 }
 
 .card {
-  inline-size: 100vw;
-  display: grid;
-  grid-template-rows: 56px 100vw max-content;
+  /* display: grid;
+  grid-template-rows: 33px var(--page-width) max-content; */
+  border: 2px solid #000;
 }
 
 .card__title {
   font-variation-settings: 'wght' var(--title-font-weight);
-  border: 2px solid #000;
-
-  padding: 0 10px;
+  font-size: var(--main-font-size);
+  border-bottom: 2px solid #000;
+  line-height: 100%;
+  padding: 4px 10px 6px;
 }
 
 .card__image-container {
-  position: relative;
-  border: 2px solid #000;
-  
+  position: relative;  
 }
 
 .card__image {
-  height: 100%;
+  inline-size: calc(var(--page-width) - 4px);
+  block-size: calc(var(--page-width) - 4px);
   object-fit: cover;
   object-position: right;
+  
 }
 
 .watermark {
@@ -93,8 +98,7 @@
 }
 
 .card__content {
-  border: 2px solid #000;
-  border-top: none;
+  border-top: 2px solid #000;
   display: grid;
   grid-template-rows: max-content max-content min-content;
   gap: 25px;

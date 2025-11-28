@@ -6,4 +6,6 @@
     --main-font-weight: 400;
     --title-font-weight: 700;
     --main-font-size: 18px;
+
+    --page-width: 700px;  /* Заменить на clamp */
 }
