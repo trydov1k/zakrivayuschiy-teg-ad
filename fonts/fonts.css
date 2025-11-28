@@ -3,7 +3,7 @@
 @font-face {
     src: 
         local(PressStart2P),    
-        url('../fonts/PressStart2P-Regular.woff') format('woff');
+        url('../fonts/PressStart2P-Regular.woff') format('woff'),;
     font-family: 'PressStart2P';
     font-weight: normal;
     font-display: swap;
@@ -13,7 +13,8 @@
     font-family: 'Inter';
     src:
         local('Inter'),
-        url('../fonts/Inter-Variable.woff2') format('woff2 supports variations');
+        url('../fonts/Inter-Variable.woff2') format('woff2 supports variations'),
+        url('./Inter-Variable.woff2') format('woff2-variations');;
     font-display: swap;
-    font-weight: 100 900;
+    font-weight: 400 785;
 }
