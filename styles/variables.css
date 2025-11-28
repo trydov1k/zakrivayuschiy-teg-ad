@@ -8,4 +8,6 @@
     --main-font-size: 18px;
 
     --page-width: 700px;  /* Заменить на clamp */
+
+    --background-gradient: url('../images/background.svg')  /* Заменить на градиент */
 }

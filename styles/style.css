@@ -17,7 +17,7 @@
   font-size: var(--main-font-size);
   font-variation-settings: 'wght' var(--main-font-weight) 400;
   line-height: 21px;
-  background-image: url('../images/background.svg');
+  background-image: var(--background-gradient);
 }
 
 .header {
@@ -59,9 +59,10 @@
 }
 
 .card {
-  /* display: grid;
-  grid-template-rows: 33px var(--page-width) max-content; */
+  display: grid;
+  grid-template-rows: 33px calc(var(--page-width) - 4px) min-content;
   border: 2px solid #000;
+  margin-bottom: 52px;
 }
 
 .card__title {
